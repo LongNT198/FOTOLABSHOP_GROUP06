@@ -10,7 +10,7 @@ FOTOLAB SHOP
 	3. Nguyễn Hữu Hoàng	(Student1513399)
 
 =======================================
-Documentations : https://github.com/L3nhan/doodle_group01/tree/main/Documentations
+Documentations : https://github.com/LongNT198/FOTOLABSHOP_GROUP06/tree/main/Documentations
 =======================================
 Published website : https://github.com/LongNT198/FOTOLABSHOP_GROUP06
 =======================================
