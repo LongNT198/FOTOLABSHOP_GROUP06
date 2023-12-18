@@ -12,7 +12,7 @@ FOTOLAB SHOP
 =======================================
 Documentations : https://github.com/LongNT198/FOTOLABSHOP_GROUP06/tree/main/Documentations
 =======================================
-Published website : https://github.com/LongNT198/FOTOLABSHOP_GROUP06
+Published website : https://longnt198.github.io/FOTOLABSHOP_GROUP06/
 =======================================
 Thank you for visit our website.
 ![image](https://github.com/LongNT198/FOTOLABSHOP_GROUP06/assets/154237547/9a6d6279-de98-4ceb-973c-bda8119fa41f)
