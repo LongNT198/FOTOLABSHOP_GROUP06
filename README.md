@@ -15,4 +15,4 @@ Documentations : https://github.com/LongNT198/FOTOLABSHOP_GROUP06/tree/main/Docu
 Published website : https://longnt198.github.io/FOTOLABSHOP_GROUP06/
 =======================================
 Thank you for visit our website.
-![image](https://github.com/LongNT198/LongNT198/assets/154237547/85a723c1-d1ee-42cf-909c-433f3309a937)
+
