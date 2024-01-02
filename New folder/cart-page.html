@@ -1,0 +1,278 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Cart page</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/logo/logo.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js" integrity="sha512-KZmyTq3PLx9EZl0RHShHQuXtrvdJ+m35tuOiwlcZfs/rE7NZv29ygNA8SFCkMXTnYZQK2OX0Gm2qKGfvWEtRXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="assets/js/mainController.js"></script>
+
+    <!-- CSS
+	============================================ -->
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Icon Font CSS -->
+    <link rel="stylesheet" href="assets/css/icons.min.css">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="assets/css/plugins.css">
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body ng-app="myApp" ng-controller="myCtrl">
+    <header class="header-area header-padding-1 sticky-bar header-res-padding clearfix">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-2 col-lg-2 col-md-6 col-4">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img alt="" src="images/logo/logonay.png" width="150px" weight="auto">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xl-8 col-lg-8 d-none d-lg-block">
+                    <div class="main-menu">
+                        <nav>
+                            <ul>
+                                <li><a href="index.html">Home</a>
+                                <li><a href="categories.html"> Categories</a></li>
+                                <li><a href="login.html"> Login</a></li>                           
+                                <li><a href="aboutus.html"> About us</a></li>
+                                <li><a href="contactus.html"> Contact us</a></li>
+                                
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-6 col-8">
+                    <div class="header-right-wrap">
+                        <div class="same-style cart-wrap">
+                            <button class="icon-cart">
+                                <i class="pe-7s-shopbag"></i>
+                                <span class="count-style">0</span>
+                            </button>
+                            <div class="shopping-cart-content" style="overflow-y: scroll; height: 300px; border: none;">
+                                <ul ng-click="Delete(car, $event)"></ul>
+                                <div class="shopping-cart-total">
+                                    <h4>Total : <span class="shop-total">$0.00</span></h4>
+                                </div>
+                                <div class="shopping-cart-btn btn-hover text-center">
+                                    <a class="default-btn" href="cart-page.html">view cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="breadcrumb-area pt-35 pb-35 bg-gray-3">
+        <div class="container">
+            <div class="breadcrumb-content text-center">
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li class="active">Cart Page </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="cart-main-area pt-90 pb-100">
+        <div class="container">
+            <h3 class="cart-page-title">Your cart items</h3>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                    <form action="#">
+                        <div class="table-content table-responsive cart-table-content">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>Image</th>
+                                        <th>Product Name</th>
+                                        <th>Until Price</th>
+                                        <th>Qty</th>
+                                        <th>Subtotal</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody ng-repeat="car in cart">
+                                    <tr>
+                                        <td value="{{car.stt}}">{{car.stt}}</td>
+                                        <td>
+                                            <img src="{{car.id}}" width="100px">
+                                        </td>
+                                        <td id="name">{{car.brand}}</td>
+                                        <td>{{car.price}}$</td>
+                                        <td ng-bind="{{car.qty}}" class="value" id="value">{{car.qty}}</td>
+                                        <td>{{car.price}}$</td>
+                                        <td><a href="#" ng-click="Delete(car)">Delete</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="cart-shiping-update-wrapper">
+                                    <div class="cart-shiping-update">
+                                        <a href="shop.html">Continue Shopping</a>
+                                    </div>
+                                    <!-- <div class="cart-clear">
+                                        <button>Update Shopping Cart</button>
+                                        <a href="#">Clear Shopping Cart</a>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="col-lg-4 col-md-12">
+                        <div class="grand-totall">
+                            <div class="title-wrap">
+                                <h4 class="cart-bottom-title section-bg-gary-cart">Cart Total</h4>
+                            </div>
+                            <h5>Total price <span ng-bind="total+'$'"></span></h5>
+                            <div class="total-shipping">
+                                <ul>
+                                    <li><h5> VAT <span>10%</span></h5></li>
+                                </ul>
+                            </div>
+                            <h4 class="grand-totall-title">Grand Total <span ng-bind="total+total*10/100+'$'"></span></h4>
+                            <a href="index.html" onclick="ham()">Proceed to Checkout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <footer class="footer-area bg-gray pt-50 pb-20">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 col-md-4 col-sm-4">
+                    <div class="copyright mb-30">
+                        <div class="footer-logo">
+                            <a href="index.html">
+                                <img alt="" src="images/logo/logonay.png" width="100%" height="100%"> </a>
+                            </a>
+                        </div>
+                        <p>© 2023 <a href="#">Fotolab Shop</a>.<br> All Rights Reserved</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-4">
+                    <div class="footer-widget mb-30 ml-30">
+                        <div class="footer-title">
+                            <h3><b>SITE MAP</b></h3>
+                        </div>
+                        <div class="footer-list">
+                            <ul>
+                                <li><a href="index.html">Homepage</a></li>
+                                <li><a href="categories">Categories</a></li>
+                                <li><a href="login-register.html">Login</a></li>
+                                <li><a href="aboutus.html">About us</a></li>
+                                <li><a href="contactus.html">Contact us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-4">
+                    <div class="footer-widget mb-30 ml-50">
+                        <div class="footer-title">
+                            <h3><b>CATEGORIES</b></h3>
+                        </div>
+                        <div class="footer-list">
+                            <ul>
+                                <li><a href="#">Cameras</a></li>
+                                <li><a href="#">Camera lenses</a></li>
+                                <li><a href="#">Pro audio</a></li>
+                                <li><a href="#">Tripods & supports</a></li>
+                                <li><a href="#">Lighting & Studio</a></li>
+                                <li><a href="#">Camera bags & cases</a></li>
+                                <li><a href="#">Miscellaneous accessories</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-sm-6">
+                    <div class="footer-widget mb-30 ml-75">
+                        <div class="footer-title">
+                            <h3><b>Brand</b></h3>
+                        </div>
+                        <div class="footer-list">
+                            <ul>
+                                <li><a href="#">Canon</a></li>
+                                <li><a href="#">Nikon</a></li>
+                                <li><a href="#">Sony</a></li>
+                                <li><a href="#">Yashica</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="footer-widget mb-30 ml-70">
+                        <div class="footer-title">
+                            <h3><B>Group 06</B></h3>
+                        </div>
+                        <div class="subscribe-style">
+                            <p>This is first E-Project our group</p><br>
+                            <h4>Thanks for visiting!</h4>         
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    
+    
+    
+    
+    
+    
+    <!-- All JS is here
+    ============================================ -->
+    <script>
+        function thongbao(){
+            alert("Thank you for SUBSCRIBE!!");
+        }
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- All JS is here
+============================================ -->
+    <script> 
+    function ham(){
+        alert("Thank you for shopping in our shop!!!");
+        sessionStorage.clear();
+    };
+    </script>
+    <script src="assets/js/vendor/modernizr-3.11.7.min.js"></script>
+    <script src="assets/js/vendor/jquery-v3.6.0.min.js"></script>
+    <script src="assets/js/vendor/jquery-migrate-v3.3.2.min.js"></script>
+    <script src="assets/js/vendor/popper.min.js"></script>
+    <script src="assets/js/vendor/bootstrap.min.js"></script>
+    <script src="assets/js/plugins.js"></script>
+    <!-- Ajax Mail -->
+    <script src="assets/js/ajax-mail.js"></script>
+    <!-- Main JS -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+</body>
+
+</html>
