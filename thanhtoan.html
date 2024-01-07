@@ -1,0 +1,459 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    
+    <title>Login-register</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="./images/logo/logonay.png">
+    
+    <!-- CSS
+	============================================ -->
+   
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Icon Font CSS -->
+    <link rel="stylesheet" href="assets/css/icons.min.css">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="assets/css/plugins.css">
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <header class="header-area header-padding-1 sticky-bar header-res-padding clearfix">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-2 col-lg-2 col-md-6 col-4">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img alt="" src="images/logo/logonay.png" width="150px" weight="auto">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xl-8 col-lg-8 d-none d-lg-block">
+                    <div class="main-menu">
+                        <nav>
+                            <ul>
+                                <li><a href="index.html">Home</a>
+                                <li><a href="categories.html"> Categories</a></li> 
+                                <li><a href="login-register.html"> Login</a></li>                          
+                                <li><a href="aboutus.html"> About us</a></li>
+                                <li><a href="contactus.html"> Contact us</a></li>
+                                
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-6 col-8">
+                    <div class="header-right-wrap">
+                        <div class="same-style cart-wrap">
+                            <button class="icon-cart">
+                                <i class="pe-7s-shopbag"></i>
+                                <span class="count-style">0</span>
+                            </button>
+                            <div class="shopping-cart-content" style="overflow-y: scroll; height: 300px; border: none;">
+                                <ul ng-click="Delete(car, $event)"></ul>
+                                <div class="shopping-cart-total">
+                                    <h4>Total : <span class="shop-total">$0.00</span></h4>
+                                </div>
+                                <div class="shopping-cart-btn btn-hover text-center">
+                                    <a class="default-btn" href="cart-page.html">view cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+<div class="breadcrumb-area pt-35 pb-35 bg-gray-3">
+    <div class="container">
+        <div class="breadcrumb-content text-center">
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li class="active">order </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="login-register-area pt-100 pb-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 col-md-12 ms-auto me-auto">
+                <div class="login-register-wrapper">
+                    <div class="login-register-tab-list nav">
+                        <a class="active" data-bs-toggle="tab" href="#lg1">
+                            <h4> order </h4>
+                        </a>
+                        
+                    </div>
+                    <div class="tab-content">
+                        <div id="lg1" class="tab-pane active">
+                            <div class="login-form-container">
+                                <div class="login-register-form">
+                                
+
+                                 <table>
+                                    <tr>
+                                        <td>
+                                            <style>
+                                                table {
+                                                  border-collapse: collapse;
+                                                  width: 100%;
+                                                }
+                                                th, td {
+                                                  border-bottom: 1px solid rgb(175, 175, 175);
+                                                  padding: 8px;
+                                                  text-align: center;
+                                                }
+                                              </style>
+                                            </head>
+                                            <body>
+                                              <h4>Confirm cart</h4>
+                                              <table>
+                                                <tr>
+                                                  <th>Image</th>
+                                                  <th>Product's name</th>
+                                                  <th>Unit price</th>
+                                                  <th>Quantity</th>
+                                                  <th>into money</th>
+                                                </tr>
+                                                <tr>
+                                                  <td><img src="./images/BestSeller/a6400 E-mount APS-C 01.jpg" alt="Product 1" width="100"></td>
+                                                  <td>a6400 E-mount APS-C</td>
+                                                  <td>$100</td>
+                                                  <td>2</td>
+                                                  <td>$200</td>
+                                                </tr>
+                                                <tr>
+                                                  <td><img src="./images/BestSeller/PowerShot G7 X Mark III 01.png" alt="Product 2" width="100"></td>
+                                                  <td>PowerShot G7 X Mark III</td>
+                                                  <td>$150</td>
+                                                  <td>1</td>
+                                                  <td>$150</td>
+                                                  <td></td>
+                                                  <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td>discount code</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td>provisional </td>
+                                                    <td>$550</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td>total amount </td>
+                                                    <td>$550</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                  </tr>
+                                                <!-- Thêm các dòng khác tương tự cho các sản phẩm khác -->
+                                              </table>
+                                        </td>
+                                    </tr>
+                                 </table>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+
+                    
+                    <div class="tab-content">
+                        <div id="lg1" class="tab-pane active">
+                            <div class="login-form-container">
+                                <div class="login-register-form">
+                                    <form action="#" method="post">
+                                        <h3>buyer information</h3>
+                                        <form id="checkoutForm">
+                                            <div>
+                                              <label for="fullName">Full Name:</label>
+                                              <input type="text" id="fullName" required>
+                                            </div>
+                                            
+                                            <div>
+                                              <label for="email">Email:</label>
+                                              <input type="email" id="email" required>
+                                            </div>
+                                           
+                                            <div>
+                                                <label for="phone">Phone:</label>
+                                                <input type="text" id="phone" pattern="[0-9]+" title="Please enter only digits" required>
+                                                <small>Enter a phone number containing only digits</small>
+                                              </div>
+                                            <div>
+                                              <label for="province">Province:</label>
+                                              <select id="province" required style="background-color: rgb(243, 243, 243);">
+                                                <option value="An Giang">An Giang</option>
+                                                <option value="Bà Rịa - Vũng Tàu">Bà Rịa - Vũng Tàu</option>
+                                                <option value="Bắc Giang">Bắc Giang</option>
+                                                <option value="Bắc Kạn">Bắc Kạn</option>
+                                                <option value="Bạc Liêu">Bạc Liêu</option>
+                                                <option value="Bắc Ninh">Bắc Ninh</option>
+                                                <option value="Bến Tre">Bến Tre</option>
+                                                <option value="Bình Định">Bình Định</option>
+                                                <option value="Bình Dương">Bình Dương</option>
+                                                <option value="Bình Phước">Bình Phước</option>
+                                                <option value="Bình Thuận">Bình Thuận</option>
+                                                <option value="Cà Mau">Cà Mau</option>
+                                                <option value="Cao Bằng">Cao Bằng</option>
+                                                <option value="Đắk Lắk">Đắk Lắk</option>
+                                                <option value="Đắk Nông">Đắk Nông</option>
+                                                <option value="Điện Biên">Điện Biên</option>
+                                                <option value="Đồng Nai">Đồng Nai</option>
+                                                <option value="Đồng Tháp">Đồng Tháp</option>
+                                                <option value="Gia Lai">Gia Lai</option>
+                                                <option value="Hà Giang">Hà Giang</option>
+                                                <option value="Hà Nam">Hà Nam</option>
+                                                <option value="Hà Tĩnh">Hà Tĩnh</option>
+                                                <option value="Hải Dương">Hải Dương</option>
+                                                <option value="Hậu Giang">Hậu Giang</option>
+                                                <option value="Hòa Bình">Hòa Bình</option>
+                                                <option value="Hưng Yên">Hưng Yên</option>
+                                                <option value="Khánh Hòa">Khánh Hòa</option>
+                                                <option value="Kiên Giang">Kiên Giang</option>
+                                                <option value="Kon Tum">Kon Tum</option>
+                                                <option value="Lai Châu">Lai Châu</option>
+                                                <option value="Lâm Đồng">Lâm Đồng</option>
+                                                <option value="Lạng Sơn">Lạng Sơn</option>
+                                                <option value="Lào Cai">Lào Cai</option>
+                                                <option value="Long An">Long An</option>
+                                                <option value="Nam Định">Nam Định</option>
+                                                <option value="Nghệ An">Nghệ An</option>
+                                                <option value="Ninh Bình">Ninh Bình</option>
+                                                <option value="Ninh Thuận">Ninh Thuận</option>
+                                                <option value="Phú Thọ">Phú Thọ</option>
+                                                <option value="Quảng Bình">Quảng Bình</option>
+                                                <option value="Quảng Nam">Quảng Nam</option>
+                                                <option value="Quảng Ngãi">Quảng Ngãi</option>
+                                                <option value="Quảng Ninh">Quảng Ninh</option>
+                                                <option value="Quảng Trị">Quảng Trị</option>
+                                                <option value="Sóc Trăng">Sóc Trăng</option>
+                                              </select>
+                                            </div>
+                                            <div>
+                                                <label for="province">District:</label>
+                                                <select id="province" required style="background-color: rgb(235, 233, 233);">
+                                                  <option value="An Giang">Ba Đình</option>
+                                                  <option value="Bà Rịa - Vũng Tàu"> Hoàn Kiếm</option>
+                                                  <option value="Bắc Giang"> Tây Hồ</option>
+                                                  <option value="Bắc Kạn"> Long Biên</option>
+                                                  <option value="Bạc Liêu">Cầu Giấy</option>
+                                                  <option value="Bắc Ninh"> Đống Đa</option>
+                                                  <option value="Bến Tre"> Hai Bà Trưng</option>
+                                                  <option value="Bình Định">Hoàng Mai</option>
+                                                  <option value="Bình Dương">Thanh Xuân</option>
+                                                  <option value="Bình Phước"> Sóc Sơn</option>
+                                                  <option value="Bình Thuận">Đông Anh</option>
+                                                  <option value="Cà Mau"> Gia Lâm</option>
+                                                  <option value="Cao Bằng"> Nam Từ Liêm</option>
+                                                  <option value="Đắk Lắk">Đồng Văn</option>
+                                                  <option value="Đắk Nông">Bắc Mê</option>
+                                                  <option value="Điện Biên">Điện Biên</option>
+                                                  <option value="Đồng Nai"> Mèo Vạc</option>
+                                                  <option value="Đồng Tháp"> Bảo Lâm</option>
+                                                  <option value="Gia Lai">Thông Nông</option>
+                                                  <option value="Hà Giang">Trùng Khánh</option>
+                                                  <option value="Hà Nam">Vị Xuyên</option>
+                                                  <option value="Hà Tĩnh">Hạ Lang</option>
+                                                  <option value="Hải Dương"> Quảng Uyên</option>
+                                                  <option value="Hậu Giang">Phục Hoà</option>
+                                                  <option value="Hòa Bình">Bạch Thông</option>
+                                                  <option value="Hưng Yên">Chợ Đồn</option>
+                                                  <option value="Khánh Hòa"> Bát Xát</option>
+                                                  <option value="Kiên Giang">Mường Khương</option>
+                                                  <option value="Kon Tum">Bắc Hà</option>
+                                                  <option value="Lai Châu"> Bảo Thắng</option>
+                                                  <option value="Lâm Đồng"> Bảo Yên</option>
+                                                  <option value="Lạng Sơn">Mường Chà</option>
+                                                  <option value="Lào Cai">Tủa Chùa</option>
+                                                  <option value="Long An"> Phong Thổ</option>
+                                                  <option value="Nam Định">Mộc Châu</option>
+                                                  <option value="Nghệ An">Yên Châu</option>
+                                                  <option value="Ninh Bình">Văn Yên</option>
+                                                  <option value="Ninh Thuận">Trấn Yên</option>
+                                                  <option value="Phú Thọ">Đà Bắc</option>
+                                                  <option value="Quảng Bình"> Đại Từ</option>
+                                                  <option value="Quảng Nam">Cao Lộc</option>
+                                                  
+                                                  
+                                                </select>
+                                              </div>
+                                            <div>
+                                              <label for="address">Address:</label>
+                                              <textarea id="address" required></textarea>
+                                            </div>
+                                            <div>
+                                              <label for="paymentMethod">Payment Method:</label>
+                                              <select id="paymentMethod" required  style="background-color: rgb(230, 230, 230)";>
+                                                <option value="method1">Payment upon receipt (COD) <br>
+                                                    <italic>Our staff will contact you as soon as possible.</italic></option>
+                                                <option value="method2">Bank transfer <br>
+                                                    Applicable to customers who want to transfer money directly via bank</option>
+                                               
+                                              </select>
+                                            </div>
+                                            <form>
+                                            
+                                            <button type="submit">Submit</button>
+                                            <a href="giohang.html">  <button type="button" onclick="goBack()">return to cart</button></a>
+                                          
+                                          </form>
+                                        
+                                          <script>
+                                            function goBack() {
+                                              // Xử lý khi người dùng quay lại giỏ hàng
+                                              alert('Return to cart');
+                                            }
+                                        
+                                            document.getElementById('checkoutForm').addEventListener('submit', function(event) {
+                                              event.preventDefault();
+                                              const fullName = document.getElementById('fullName').value;
+                                              const province = document.getElementById('province').value;
+                                              const email = document.getElementById('email').value;
+                                              const district = document.getElementById('district').value;
+                                              const phone = document.getElementById('phone').value;
+                                              const address = document.getElementById('address').value;
+                                              const paymentMethod = document.getElementById('paymentMethod').value;
+                                                 // Kiểm tra email không chứa chữ in hoa và phải chứa ký tự "@" và dấu chấm
+                                            const emailPattern = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
+                                            if (emailPattern.test(email)) {
+                                                console.log('Email hợp lệ');
+                                                console.log('Thông tin đặt hàng:', { fullName, email });
+                                            } else {
+                                                console.log('Email không hợp lệ');
+                                            }
+                                           
+                                        
+                                              // Gửi thông tin đặt hàng đến server hoặc xử lý theo nhu cầu cụ thể
+                                              console.log('Thông tin đặt hàng:', { fullName, province, email, district, phone, address, paymentMethod });
+                                            });
+                                          </script>
+  
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="footer-area bg-gray pt-50 pb-20">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2 col-md-4 col-sm-4">
+                <div class="copyright mb-30">
+                    <div class="footer-logo">
+                        <a href="index.html">
+                            <img alt="" src="images/logo/logonay.png" width="100%" height="100%"> </a>
+                        </a>
+                    </div>
+                    <p>© 2023 <a href="#">Fotolab Shop</a>.<br> All Rights Reserved</p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-4">
+                <div class="footer-widget mb-30 ml-30">
+                    <div class="footer-title">
+                        <h3><b>SITE MAP</b></h3>
+                    </div>
+                    <div class="footer-list">
+                        <ul>
+                            <li><a href="index.html">Homepage</a></li>
+                            <li><a href="categories">Categories</a></li>
+                            <li><a href="login-register.html">Login</a></li>
+                            <li><a href="aboutus.html">About us</a></li>
+                            <li><a href="contactus.html">Contact us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-4">
+                <div class="footer-widget mb-30 ml-50">
+                    <div class="footer-title">
+                        <h3><b>CATEGORIES</b></h3>
+                    </div>
+                    <div class="footer-list">
+                        <ul>
+                            <li><a href="#">Cameras</a></li>
+                            <li><a href="#">Camera lenses</a></li>
+                            <li><a href="#">Pro audio</a></li>
+                            <li><a href="#">Tripods & supports</a></li>
+                            <li><a href="#">Lighting & Studio</a></li>
+                            <li><a href="#">Camera bags & cases</a></li>
+                            <li><a href="#">Miscellaneous accessories</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-6 col-sm-6">
+                <div class="footer-widget mb-30 ml-75">
+                    <div class="footer-title">
+                        <h3><b>Brand</b></h3>
+                    </div>
+                    <div class="footer-list">
+                        <ul>
+                            <li><a href="#">Canon</a></li>
+                            <li><a href="#">Nikon</a></li>
+                            <li><a href="#">Sony</a></li>
+                            <li><a href="#">Yashica</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="footer-widget mb-30 ml-70">
+                    <div class="footer-title">
+                        <h3><B>Group 06</B></h3>
+                    </div>
+                    <div class="subscribe-style">
+                        <p>This is first E-Project our group</p><br>
+                        <h4>Thanks for visiting!</h4>         
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- All JS is here
+============================================ -->
+
+<script src="assets/js/vendor/modernizr-3.11.7.min.js"></script>
+<script src="assets/js/vendor/jquery-v3.6.0.min.js"></script>
+<script src="assets/js/vendor/jquery-migrate-v3.3.2.min.js"></script>
+<script src="assets/js/vendor/popper.min.js"></script>
+<script src="assets/js/vendor/bootstrap.min.js"></script>
+<script src="assets/js/plugins.js"></script>
+<!-- Ajax Mail -->
+<script src="assets/js/ajax-mail.js"></script>
+<!-- Main JS -->
+<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

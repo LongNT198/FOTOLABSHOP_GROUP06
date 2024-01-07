@@ -1,0 +1,735 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Fotolab Shop</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/logo/logonay.png">
+    
+    <!-- CSS
+    ============================================ -->
+ 
+  
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Icon Font CSS -->
+    <link rel="stylesheet" href="assets/css/icons.min.css">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="assets/css/plugins.css">
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body >
+<header class="header-area header-padding-1 sticky-bar header-res-padding clearfix">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-2 col-lg-2 col-md-6 col-4">
+                <div class="logo">
+                    <a href="index.html">
+                        <img alt="" src="images/logo/logonay.png" width="150px" weight="auto">
+                    </a>
+                </div>
+            </div>
+            <div class="col-xl-8 col-lg-8 d-none d-lg-block">
+                <div class="main-menu">
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">Home</a>
+                            <li><a href="categories.html"> Categories</a></li>
+                            <li><a href="login-register.html"> Login</a></li>                           
+                            <li><a href="aboutus.html"> About us</a></li>
+                            <li><a href="contactus.html"> Contact us</a></li>
+                            
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="col-xl-2 col-lg-2 col-md-6 col-8">
+                <div class="header-right-wrap">
+                    <div class="same-style cart-wrap">
+                        <button class="icon-cart">
+                            <i class="pe-7s-shopbag"></i>
+                            <span class="count-style">0</span>
+                        </button>
+                        <div class="shopping-cart-content" style="overflow-y: scroll; height: 600px; border: 1px solid #C1CDC1;">
+                            <ul ng-click="Delete(car, $event)"></ul>
+                            <div class="shopping-cart-total">
+                                <h4>Total : <span class="shop-total">$0.00</span></h4>
+                            </div>
+                            <div class="shopping-cart-btn btn-hover text-center">
+                                <a class="default-btn" href="cart-page.html">view cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="slider-area">
+    <div class="slider-active owl-carousel nav-style-1 owl-dot-none">
+        <div class="single-slider slider-height-1 bg-gray">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-12 col-sm-6">
+                        <div class="slider-content slider-animated-1">
+                            <h4 class="animated">Fotolab Shop</h4>
+                            <h2 class="animated">Capture the moment</h2><br>
+                            <h2 class="animated">By your camera</h2>
+                            <div class="slider-btn btn-hover">
+                                <a class="animated" href="categories.html">SHOP NOW</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-12 col-sm-6">
+                        <div class="slider-single-img slider-animated-1">
+                            <img class="animated" src="images/Slider/86320978-man-looking-at-photos-he-taken_auto_x2.jpg" alt="Capture the moment">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="single-slider slider-height-1 bg-gray">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-12 col-sm-6">
+                        <div class="slider-content slider-animated-1">
+                            <h4 class="animated">Fotolab Shop</h4>
+                            <h2 class="animated">Camera accessories</h2>
+                            <div class="slider-btn btn-hover">
+                                <a class="animated" href="categories.html">SHOP NOW</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-12 col-sm-6">
+                        <div class="slider-single-img slider-animated-1">
+                            <img class="animated" src="images/Slider/Camera Accessories_auto_x2.jpg" alt="Camera Accessories">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="single-slider slider-height-1 bg-gray">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-12 col-sm-6">
+                        <div class="slider-content slider-animated-1">
+                            <h4 class="animated">Fotolab Shop</h4>
+                            <h2 class="animated"><br>A close friend for every trip</h2>
+                            <div class="slider-btn btn-hover">
+                                <a class="animated" href="categories.html">SHOP NOW</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-12 col-sm-6">
+                        <div class="slider-single-img slider-animated-1">
+                            <img class="animated" src="images/Slider/3394_auto_x2.jpg" alt="A close friend for every trip">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="suppoer-area pt-100 pb-60">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="support-wrap mb-30 support-1">
+                    <div class="support-icon">
+                        <img class="animated" src="images/imgSupport/support-1.png" alt="">
+                    </div>
+                    <div class="support-content">
+                        <h5>Free Shipping</h5>
+                        <p>Free shipping on all order</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="support-wrap mb-30 support-2">
+                    <div class="support-icon">
+                        <img class="animated" src="images/imgSupport/support-2.png" alt="">
+                    </div>
+                    <div class="support-content">
+                        <h5>Support 24/7</h5>
+                        <p>Free shipping on all order</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="support-wrap mb-30 support-3">
+                    <div class="support-icon">
+                        <img class="animated" src="images/imgSupport/support-3.png" alt="">
+                    </div>
+                    <div class="support-content">
+                        <h5>Money Return</h5>
+                        <p>Free shipping on all order</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="support-wrap mb-30 support-4">
+                    <div class="support-icon">
+                        <img class="animated" src="images/imgSupport/support-4.png" alt="">
+                    </div>
+                    <div class="support-content">
+                        <h5>Order Discount</h5>
+                        <p>Free shipping on all order</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="product-area pb-60">
+    <div class="container">
+        <div class="section-title text-center">
+            <h2>DAILY DEALS!</h2>
+        </div>
+        <div class="product-tab-list nav pt-30 pb-55 text-center">
+            <a class="active" href="#product-1" data-bs-toggle="tab">
+                <h4><b>Best Sellers</b> </h4>
+            </a>
+            <a href="#product-2" data-bs-toggle="tab">
+                <h4><b>New Arrival</b></h4>
+            </a>
+            <a href="#product-3" data-bs-toggle="tab">
+                <h4><b>Sale Item</b></h4>
+            </a>
+        </div>
+        <div class="tab-content jump">
+            <!-- Best Sellers -->
+            <div class="tab-pane active" id="product-1">
+                <div class="row">
+                    <div class="col-xl-3 col-md-6 col-lg-4 col-sm-6">
+                        <div class="product-wrap mb-25">
+                            <div class="product-img">
+                                <a href="product-details.html">
+                                    <img class="default-img" src="images/Categories/BestSeller/PowerShot G7 X Mark III 02.png" alt="PowerShot G7 X Mark III">
+                                    <img class="hover-img" src="images/Categories/BestSeller/PowerShot G7 X Mark III 01.png" alt="PowerShot G7 X Mark III">
+                                </a>
+                                <span class="purple">Best Seller</span>
+                                <div class="product-action">
+                                    <div class="pro-same-action pro-cart add-cart">
+                                        <a title="Add To Cart" href="javascript:void(0)"><i class="pe-7s-cart"></i> Add to cart</a>
+                                    </div>
+                                    <button type="button" class="btn-compare" data="0">Compare</button>
+                                </div>
+                            </div>
+                            <div class="product-content text-center">
+                                <h3><a href="product-details.html" >PowerShot G7 X Mark III</a></h3>
+                                <h5>Canon</h5>
+                                <div class="product-price">
+                                    <span>$749</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-lg-4 col-sm-6">
+                        <div class="product-wrap mb-25">
+                            <div class="product-img">
+                                <a href="product-details.html">
+                                    <img class="default-img" src="images/Categories/BestSeller/Extender EF 2x III 01.jpg" alt="Extender EF 2x III">
+                                    <img class="hover-img" src="images/Categories/BestSeller/Extender EF 2x III 02.jpg" alt="Extender EF 2x III">
+                                </a>
+                                <span class="purple">Best Seller</span>
+                                <div class="product-action">
+                                    <div class="pro-same-action pro-cart add-cart">
+                                        <a title="Add To Cart" href="javascript:void(0)" ng-click="Add(carModel.id5)"><i class="pe-7s-cart"></i> Add to cart</a>
+                                    </div>
+                                    <button type="button" class="btn-compare" data="1">Compare</button>
+                                </div>
+                            </div>
+                            <div class="product-content text-center">
+                                <h3><a href="product-details.html"> Extender EF 2x III</a></h3>
+                                <h5>Canon</h5>                               
+                                <div class="product-price">
+                                    <span>$383</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-lg-4 col-sm-6">
+                        <div class="product-wrap mb-25">
+                            <div class="product-img">
+                                <a href="product-details.html">
+                                    <img class="default-img" src="images/Categories/BestSeller/D7500 01.jpg" alt="D7500">
+                                    <img class="hover-img" src="images/Categories/BestSeller/D7500 02.jpg" alt="D7500">
+                                </a>
+                                <span class="purple">Best Seller</span>
+                                <div class="product-action">
+                                    <div class="pro-same-action pro-cart add-cart">
+                                        <a title="Add To Cart" href="javascript:void(0)"><i class="pe-7s-cart"></i> Add to cart</a>
+                                    </div>
+                                    <button type="button" class="btn-compare" data="2">Compare</button>
+                                </div>
+                            </div>
+                            <div class="product-content text-center">
+                                <h3><a href="product-details.html">D7500 </a></h3>
+                                <h5>Nikon</h5>                                
+                                <div class="product-price">
+                                    <span>$700</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-lg-4 col-sm-6">
+                        <div class="product-wrap mb-25">
+                            <div class="product-img">
+                                <a href="product-details.html">
+                                    <img class="default-img" src="images/Categories/BestSeller/PC NIKKOR 19mm f4E ED 01.jpg" alt="PC NIKKOR 19mm f4E ED">
+                                    <img class="hover-img" src="images/Categories/BestSeller/PC NIKKOR 19mm f4E ED 02.jpg" alt="PC NIKKOR 19mm f4E ED">
+                                </a>
+                                <span class="purple">Best Seller</span>
+                                <div class="product-action">
+                                    <div class="pro-same-action pro-cart add-cart">
+                                        <a title="Add To Cart" href="javascript:void(0)"><i class="pe-7s-cart" ng-click="Add(carModel.id1)"></i> Add to cart</a>
+                                    </div>
+                                    <button type="button" class="btn-compare" data="3">Compare</button>
+                                </div>
+                            </div>
+                            <div class="product-content text-center">
+                                <h3><a href="product-details.html" >PC NIKKOR 19mm f4E ED</a></h3>
+                                <h5>Nikon</h5>
+                                <div class="product-price">
+                                    <span>$2,360</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-lg-4 col-sm-6">
+                        <div class="product-wrap mb-25">
+                            <div class="product-img">
+                                <a href="product-details.html">
+                                    <img class="default-img" src="images/Categories/BestSeller/a6400 E-mount APS-C 01.jpg" alt="a6400 E-mount APS-C">
+                                    <img class="hover-img" src="images/Categories/BestSeller/a6400 E-mount APS-C 02.jpg" alt="a6400 E-mount APS-C">
+                                </a>
+                                <span class="purple">Best Seller</span>
+                                <div class="product-action">
+                                    <div class="pro-same-action pro-cart add-cart">
+                                        <a title="Add To Cart" href="javascript:void(0)"><i class="pe-7s-cart"></i> Add to cart</a>
+                                    </div>
+                                    <button type="button" class="btn-compare" data="4">Compare</button>
+                                </div>
+                            </div>
+                            <div class="product-content text-center">
+                                <h3><a href="product-details.html" >a6400 E-mount APS-C</a></h3>
+                                <h5>Sony</h5>
+                                <div class="product-price">
+                                    <span >$748</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-lg-4 col-sm-6">
+                        <div class="product-wrap mb-25">
+                            <div class="product-img">
+                                <a href="product-details.html">
+                                    <img class="default-img" src="images/Categories/BestSeller/FE C 16-35mm T3.1 G_01.jpg" alt="FE C 16-35mm T3.1 G">
+                                    <img class="hover-img" src="images/Categories/BestSeller/FE C 16-35mm T3.1 G_02.jpg" alt="FE C 16-35mm T3.1 G">
+                                </a>
+                                <span class="purple">Best Seller</span>
+                                <div class="product-action">
+                                    <div class="pro-same-action pro-cart add-cart">
+                                        <a title="Add To Cart" href="javascript:void(0)" ><i class="pe-7s-cart"></i> Add to cart</a>
+                                    </div>
+                                    <button type="button" class="btn-compare" data="5">Compare</button>
+                                </div>
+                            </div>
+                            <div class="product-content text-center">
+                                <h3><a href="product-details.html" >FE C 16-35mm T3.1 G</a></h3>
+                                <h5>Sony</h5>
+                                <div class="product-price">
+                                    <span>$4,795</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-lg-4 col-sm-6">
+                        <div class="product-wrap mb-25">
+                            <div class="product-img">
+                                <a href="product-details.html">
+                                    <img class="default-img" src="images/Categories/BestSeller/MF-2 Camera Super DX_01.jpg" alt="MF-2 Camera Super DX">
+                                    <img class="hover-img" src="images/Categories/BestSeller/MF-2 Camera Super DX_02.jpg" alt="MF-2 Camera Super DX">
+                                </a>
+                                <span class="purple">Best Seller</span>
+                                <div class="product-action">
+                                    <div class="pro-same-action pro-cart add-cart">
+                                        <a title="Add To Cart" href="javascript:void(0)"><i class="pe-7s-cart"></i> Add to cart</a>
+                                    </div>
+                                    <button type="button" class="btn-compare" data="6">Compare</button>
+                                </div>
+                            </div>
+                            <div class="product-content text-center">
+                                <h3><a href="product-details.html" >MF-2 Camera Super DX</a></h3>
+                                <h5>Yashica</h5>
+                                <div class="product-price">
+                                    <span>$115</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-lg-4 col-sm-6">
+                        <div class="product-wrap mb-25">
+                            <div class="product-img">
+                                <a href="product-details.html">
+                                    <img class="default-img" src="images/Categories/BestSeller/Yashica Lens ML_01.jpg" alt="Yashica Lens ML 200 mm 200mm">
+                                    <img class="hover-img" src="images/Categories/BestSeller/Yashica Lens ML_02.jpg" alt="Yashica Lens ML 200 mm 200mm">
+                                </a>
+                                <span class="purple">Best Seller</span>
+                                <div class="product-action">
+                                    <div class="pro-same-action pro-cart add-cart">
+                                        <a title="Add To Cart" href="javascript:void(0)" ><i class="pe-7s-cart"></i> Add to cart</a>
+                                    </div>
+                                    <button type="button" class="btn-compare" data="7">Compare</button>
+                                </div>
+                            </div>
+                            <div class="product-content text-center">
+                                <h3><a href="product-details.html">Yashica Lens ML 200 mm 200mm </a></h3>
+                                <h5>Yashica</h5>
+                                <div class="product-price">
+                                    <span>$229.99</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /New Arrival -->
+            <!-- New Arrival -->
+            <div class="tab-pane" id="product-2">
+                <div class="row">
+                    <div class="col-xl-3 col-md-6 col-lg-4 col-sm-6">
+                        <div class="product-wrap mb-25">
+                            <div class="product-img">
+                                <a href="product-details.html">
+                                    <img class="default-img" src="images/Categories/NewArrivals/ixus-265hs-2.jpg" alt="IXUS 265 HS">
+                                    <img class="hover-img" src="images/Categories/NewArrivals/ixus-265hs-4.jpg" alt="IXUS 265 HS">
+                                </a>
+                                <span class="purple">New Arrival</span>
+                                <div class="product-action">
+                                    <div class="pro-same-action pro-cart add-cart">
+                                        <a title="Add To Cart" href="javascript:void(0)"><i class="pe-7s-cart"></i> Add to cart</a>
+                                    </div>
+                                    <button type="button" class="btn-compare" data="8">Compare</button>
+                                </div>
+                            </div>
+                            <div class="product-content text-center">
+                                <h3><a href="product-details.html">IXUS 265 HS</a></h3>
+                                <h5>Canon</h5>
+                                <div class="product-price">
+                                    <span>$230</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-lg-4 col-sm-6">
+                        <div class="product-wrap mb-25">
+                            <div class="product-img">
+                                <a href="product-details.html">
+                                    <img class="default-img" src="images/Categories/NewArrivals/EF-M55-200mm f4.5-6.3 IS STM1.jpg" alt="EF-M55-200mm f4.5-6.3 IS STM">
+                                    <img class="hover-img" src="images/Categories/NewArrivals/EF-M55-200mm f4.5-6.3 IS STM2.jpg" alt="EF-M55-200mm f4.5-6.3 IS STM">
+                                </a>
+                                <span class="purple">New Arrival</span>
+                                <div class="product-action">
+                                    <div class="pro-same-action pro-cart add-cart">
+                                        <a title="Add To Cart" href="javascript:void(0)" ><i class="pe-7s-cart"></i> Add to cart</a>
+                                    </div>
+                                    <button type="button" class="btn-compare" data="9">Compare</button>
+                                </div>
+                            </div>
+                            <div class="product-content text-center">
+                                <h3><a href="product-details.html">EF-M55-200mm f4.5-6.3 IS STM</a></h3>
+                                <h5>Canon</h5>
+                                <div class="product-price">
+                                    <span>$260</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-lg-4 col-sm-6">
+                        <div class="product-wrap mb-25">
+                            <div class="product-img">
+                                <a href="product-details.html">
+                                    <img class="default-img" src="images/Categories/NewArrivals/Z fc01.jpg" alt="Z fc">
+                                    <img class="hover-img" src="images/Categories/NewArrivals/Z fc02.jpg" alt="Z fc">
+                                </a>
+                                <span class="purple">New Arrival</span>
+                                <div class="product-action">
+                                    <div class="pro-same-action pro-cart add-cart">
+                                        <a title="Add To Cart" href="javascript:void(0)"><i class="pe-7s-cart"></i> Add to cart</a>
+                                    </div>
+                                    <button type="button" class="btn-compare" data="10">Compare</button>
+                                </div>
+                            </div>
+                            <div class="product-content text-center">
+                                <h3><a href="product-details.html">Z fc</a></h3>
+                                <h5>Nikon</h5>
+                                <div class="product-price">
+                                    <span>$721</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-lg-4 col-sm-6">
+                        <div class="product-wrap mb-25">
+                            <div class="product-img">
+                                <a href="product-details.html">
+                                    <img class="default-img" src="images/Categories/NewArrivals/AF-S DX NIKKOR 18-300mm f3.5-6.3G ED VR_01.jpg" alt="DX NIKKOR 18-300mm f3.5-6.3G ED VR">
+                                    <img class="hover-img" src="images/Categories/NewArrivals/AF-S DX NIKKOR 18-300mm f3.5-6.3G ED VR_02.jpg" alt="DX NIKKOR 18-300mm f3.5-6.3G ED VR">
+                                </a>
+                                <span class="purple">New Arrival</span>
+                                <div class="product-action">
+                                    <div class="pro-same-action pro-cart add-cart">
+                                        <a title="Add To Cart" href="javascript:void(0)" ><i class="pe-7s-cart"></i> Add to cart</a>
+                                    </div>
+                                    <button type="button" class="btn-compare" data="11">Compare</button>
+                                </div>
+                            </div>
+                            <div class="product-content text-center">
+                                <h3><a href="product-details.html">DX NIKKOR 18-300mm f3.5-6.3G ED VR</a></h3>
+                                <h5>Nikon</h5>
+                                <div class="product-price">
+                                    <span>$475</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-lg-4 col-sm-6">
+                        <div class="product-wrap mb-25">
+                            <div class="product-img">
+                                <a href="product-details.html">
+                                    <img class="default-img" src="images/Categories/NewArrivals/ZV-E10_01.jpg" alt="ZV-E10">
+                                    <img class="hover-img" src="images/Categories/NewArrivals/ZV-E10_02.jpg" alt="ZV-E10">
+                                </a>
+                                <span class="purple">New Arrival</span>
+                                <div class="product-action">
+                                    <div class="pro-same-action pro-cart add-cart">
+                                        <a title="Add To Cart" href="javascript:void(0)"><i class="pe-7s-cart"></i> Add to cart</a>
+                                    </div>
+                                    <button type="button" class="btn-compare" data="12">Compare</button>
+                                </div>
+                            </div>
+                            <div class="product-content text-center">
+                                <h3><a href="product-details.html">ZV-E10</a></h3>
+                                <h5>Sony</h5>
+                                <div class="product-price">
+                                    <span>$750</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-lg-4 col-sm-6">
+                        <div class="product-wrap mb-25">
+                            <div class="product-img">
+                                <a href="product-details.html">
+                                    <img class="default-img" src="images/Categories/NewArrivals/FE 16-35mm F2.8 GM II_01.jpg" alt="FE 16-35mm F2.8 GM II">
+                                    <img class="hover-img" src="images/Categories/NewArrivals/FE 16-35mm F2.8 GM II_02.jpg" alt="FE 16-35mm F2.8 GM II">
+                                </a>
+                                <span class="purple">New Arrival</span>
+                                <div class="product-action">
+                                    <div class="pro-same-action pro-cart add-cart">
+                                        <a title="Add To Cart" href="javascript:void(0)"><i class="pe-7s-cart"></i> Add to cart</a>
+                                    </div>
+                                    <button type="button" class="btn-compare" data="13">Compare</button>
+                                </div>
+                            </div>
+                            <div class="product-content text-center">
+                                <h3><a href="product-details.html">FE 16-35mm F2.8 GM II</a></h3>
+                                <h5>Sony</h5>
+                                <div class="product-price">
+                                    <span>$2,298</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-lg-4 col-sm-6">
+                        <div class="product-wrap mb-25">
+                            <div class="product-img">
+                                <a href="product-details.html">
+                                    <img class="default-img" src="images/Categories/NewArrivals/YASHICA MF-1 Snapshot Art 35mm Film Camera Set_01.jpg" alt="YASHICA MF-1 Snapshot Art 35mm Film Camera Set">
+                                    <img class="hover-img" src="images/Categories/NewArrivals/YASHICA MF-1 Snapshot Art 35mm Film Camera Set_02.jpg" alt="YASHICA MF-1 Snapshot Art 35mm Film Camera Set">
+                                </a>
+                                <span class="purple">New Arrival</span>
+                                <div class="product-action">
+                                    <div class="pro-same-action pro-cart add-cart">
+                                        <a title="Add To Cart" href="javascript:void(0)"><i class="pe-7s-cart"></i> Add to cart</a>
+                                    </div>
+                                    <button type="button" class="btn-compare" data="14">Compare</button>
+                                </div>
+                            </div>
+                            <div class="product-content text-center">
+                                <h3><a href="product-details.html"></a>YASHICA MF-1 Snapshot Art 35mm Film Camera Set</h3>
+                                <h5>Yashica</h5>
+                                <div class="product-price">
+                                    <span>$45</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-lg-4 col-sm-6">
+                        <div class="product-wrap mb-25">
+                            <div class="product-img">
+                                <a href="product-details.html">
+                                    <img class="default-img" src="images/Categories/NewArrivals/Yashica Auto Yashinon 5cm 50mm f2 M42_01.jpg" alt="Yashica Auto Yashinon 5cm 50mm f2 M42">
+                                    <img class="hover-img" src="images/Categories/NewArrivals/Yashica Auto Yashinon 5cm 50mm f2 M42_02.jpg" alt="Yashica Auto Yashinon 5cm 50mm f2 M42">
+                                </a>
+                                <span class="purple">New Arrival</span>
+                                <div class="product-action">
+                                    <div class="pro-same-action pro-cart add-cart">
+                                        <a title="Add To Cart" href="javascript:void(0)"><i class="pe-7s-cart"></i> Add to cart</a>
+                                    </div>
+                                    <button type="button" class="btn-compare" data="15">Compare</button>
+                                </div>
+                            </div>
+                            <div class="product-content text-center">
+                                <h3><a href="product-details.html">Yashica Auto Yashinon 5cm 50mm f2 M42</a></h3>
+                                <h5>Yashica</h5>
+                                <div class="product-price">
+                                    <span>$150</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /New Arrival -->
+             <!-- Sale Item -->
+             <div class="tab-pane" id="product-3">
+                <div class="row">
+                    <div class="col-xl-3 col-md-6 col-lg-4 col-sm-6">
+                        <h2>No sale item now</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="footer-area bg-gray pt-50 pb-20">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2 col-md-4 col-sm-4">
+                <div class="copyright mb-30">
+                    <div class="footer-logo">
+                        <a href="index.html">
+                            <img alt="" src="images/logo/logonay.png" width="100%" height="100%"> </a>
+                        </a>
+                    </div>
+                    <p>© 2023 <a href="#">Fotolab Shop</a>.<br> All Rights Reserved</p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-4">
+                <div class="footer-widget mb-30 ml-30">
+                    <div class="footer-title">
+                        <h3><b>SITE MAP</b></h3>
+                    </div>
+                    <div class="footer-list">
+                        <ul>
+                            <li><a href="index.html">Homepage</a></li>
+                            <li><a href="categories.html">Categories</a></li>
+                            <li><a href="login-register.html">Login</a></li>
+                            <li><a href="aboutus.html">About us</a></li>
+                            <li><a href="contactus.html">Contact us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-4">
+                <div class="footer-widget mb-30 ml-50">
+                    <div class="footer-title">
+                        <h3><b>CATEGORIES</b></h3>
+                    </div>
+                    <div class="footer-list">
+                        <ul>
+                            <li><a href="#">Cameras</a></li>
+                            <li><a href="#">Camera lenses</a></li>
+                            <li><a href="#">Pro audio</a></li>
+                            <li><a href="#">Tripods & supports</a></li>
+                            <li><a href="#">Lighting & Studio</a></li>
+                            <li><a href="#">Camera bags & cases</a></li>
+                            <li><a href="#">Miscellaneous accessories</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-6 col-sm-6">
+                <div class="footer-widget mb-30 ml-75">
+                    <div class="footer-title">
+                        <h3><b>Brand</b></h3>
+                    </div>
+                    <div class="footer-list">
+                        <ul>
+                            <li><a href="#">Canon</a></li>
+                            <li><a href="#">Nikon</a></li>
+                            <li><a href="#">Sony</a></li>
+                            <li><a href="#">Yashica</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="footer-widget mb-30 ml-70">
+                    <div class="footer-title">
+                        <h3><B>Group 06</B></h3>
+                    </div>
+                    <div class="subscribe-style">
+                        <p>This is first E-Project our group</p><br>
+                        <h4>Thanks for visiting!</h4>         
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+<!-- All JS is here
+============================================ -->
+
+
+<aside id="compare-box">
+    <div class="list"></div>
+    <button type="button" class="run" disabled>Compare</button>
+</aside>
+
+<!-- Modal -->
+<div class="modal fade" id="product-compare" tabindex="-1" data-bs-backdrop="static" aria-labelledby="product-compare-label" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="product-compare-label">Product Comparisions</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="product-compare-detail">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Modal -->
+
+<!-- All JS is here
+============================================ -->
+
+<script src="assets/js/vendor/modernizr-3.11.7.min.js"></script>
+<script src="assets/js/vendor/jquery-v3.6.0.min.js"></script>
+<script src="assets/js/vendor/jquery-migrate-v3.3.2.min.js"></script>
+<script src="assets/js/vendor/popper.min.js"></script>
+<script src="assets/js/vendor/bootstrap.min.js"></script>
+<script src="assets/js/plugins.js"></script>
+<!-- Ajax Mail -->
+
+<!-- Main JS -->
+<script src="assets/js/main.js"></script>
+
+
+
+</body>
+</html>
+
+
