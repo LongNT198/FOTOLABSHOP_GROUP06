@@ -1,0 +1,368 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    
+    <title>Login-register</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="./images/logo/logonay.png">
+    
+    <!-- CSS
+	============================================ -->
+   
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Icon Font CSS -->
+    <link rel="stylesheet" href="assets/css/icons.min.css">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="assets/css/plugins.css">
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <header class="header-area header-padding-1 sticky-bar header-res-padding clearfix">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-2 col-lg-2 col-md-6 col-4">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img alt="" src="images/logo/logonay.png" width="150px" weight="auto">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xl-8 col-lg-8 d-none d-lg-block">
+                    <div class="main-menu">
+                        <nav>
+                            <ul>
+                                <li><a href="index.html">Home</a>
+                                <li><a href="categories.html"> Categories</a></li> 
+                                <li><a href="login-register.html"> Login</a></li>                          
+                                <li><a href="aboutus.html"> About us</a></li>
+                                <li><a href="contactus.html"> Contact us</a></li>
+                                
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-6 col-8">
+                    <div class="header-right-wrap">
+                        <div class="same-style cart-wrap">
+                            <button class="icon-cart">
+                                <i class="pe-7s-shopbag"></i>
+                                <span class="count-style">0</span>
+                            </button>
+                            <div class="shopping-cart-content" style="overflow-y: scroll; height: 600px; border: 1px solid #C1CDC1;">
+                                <ul ng-click="Delete(car, $event)"></ul>
+                                <div class="shopping-cart-total">
+                                    <h4>Total : <span class="shop-total">$0.00</span></h4>
+                                </div>
+                                <div class="shopping-cart-btn btn-hover text-center">
+                                    <a class="default-btn" href="cartpage.html">view cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+<div class="breadcrumb-area pt-35 pb-35 bg-gray-3">
+    <div class="container">
+        <div class="breadcrumb-content text-center">
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li class="active">Register </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="login-register-area pt-100 pb-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 col-md-12 ms-auto me-auto">
+                <div class="login-register-wrapper">
+                    <div class="login-register-tab-list nav">
+                        <a class="active" data-bs-toggle="tab" href="#lg1">
+                            <h4> login </h4>
+                        </a>
+                        <a data-bs-toggle="tab" href="#lg2">
+                            <h4> register </h4>
+                        </a>
+                    </div>
+                    <div class="tab-content">
+                        <div id="lg1" class="tab-pane active">
+                            <div class="login-form-container">
+                                <div class="login-register-form">
+                                    <form action="index.html" id="form_login" onsubmit="return checkValidateLogin()" novalidate>
+                                        <input type="text" id="user_name" name="user_name" placeholder="Username">
+                                        <p id="user_name_error" class="red"></p>
+                                        <input type="password" name="user_password" placeholder="Password">
+                                        <p id="user_password_error" class="red"></p>
+                                        
+                                        <div class="button-box">
+                                            <div class="login-toggle-btn">
+                                                <input type="checkbox">
+                                                <label>Remember me</label>
+                                                <a href="#">Forgot Password?</a>
+                                            </div>
+                                            <button type="submit"><span>Login</span></button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="lg2" class="tab-pane">
+                            <div class="login-form-container">
+                                <div class="login-register-form">
+                                    <form action="login-register.html" id="form_register" onsubmit="return checkValidateRegister()" novalidate>
+                                        <input type="text" name="username" placeholder="Username">
+                                        <p id="username_error" class="red"></p>
+
+                                        <input name="email" placeholder="Email" type="email">
+                                        <p id="email_error" class="red"></p>
+
+                                        <input type="password" name="password" placeholder="Password">
+                                        <p id="password_error" class="red"></p>
+                                        
+                                        <input type="password" name="confirm_password" placeholder="Confirm Password">
+                                        <p id="confirm_password_error" class="red"></p>
+                                        
+                                        <div class="button-box">
+                                            <button type="submit" ><span>Register</span></button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="footer-area bg-gray pt-50 pb-20">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2 col-md-4 col-sm-4">
+                <div class="copyright mb-30">
+                    <div class="footer-logo">
+                        <a href="index.html">
+                            <img alt="" src="images/logo/logonay.png" width="100%" height="100%"> </a>
+                        </a>
+                    </div>
+                    <p>© 2023 <a href="#">Fotolab Shop</a>.<br> All Rights Reserved</p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-4">
+                <div class="footer-widget mb-30 ml-30">
+                    <div class="footer-title">
+                        <h3><b>SITE MAP</b></h3>
+                    </div>
+                    <div class="footer-list">
+                        <ul>
+                            <li><a href="index.html">Homepage</a></li>
+                            <li><a href="categories.html">Categories</a></li>
+                            <li><a href="login-register.html">Login</a></li>
+                            <li><a href="aboutus.html">About us</a></li>
+                            <li><a href="contactus.html">Contact us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-4">
+                <div class="footer-widget mb-30 ml-50">
+                    <div class="footer-title">
+                        <h3><b>CATEGORIES</b></h3>
+                    </div>
+                    <div class="footer-list">
+                        <ul>
+                            <li><a href="#">Cameras</a></li>
+                            <li><a href="#">Camera lenses</a></li>
+                            <li><a href="#">Pro audio</a></li>
+                            <li><a href="#">Tripods & supports</a></li>
+                            <li><a href="#">Lighting & Studio</a></li>
+                            <li><a href="#">Camera bags & cases</a></li>
+                            <li><a href="#">Miscellaneous accessories</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-6 col-sm-6">
+                <div class="footer-widget mb-30 ml-75">
+                    <div class="footer-title">
+                        <h3><b>Brand</b></h3>
+                    </div>
+                    <div class="footer-list">
+                        <ul>
+                            <li><a href="#">Canon</a></li>
+                            <li><a href="#">Nikon</a></li>
+                            <li><a href="#">Sony</a></li>
+                            <li><a href="#">Yashica</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="footer-widget mb-30 ml-70">
+                    <div class="footer-title">
+                        <h3><B>Group 06</B></h3>
+                    </div>
+                    <div class="subscribe-style">
+                        <p>This is first E-Project our group</p><br>
+                        <h4>Thanks for visiting!</h4>         
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- All JS is here
+============================================ -->
+
+<script src="assets/js/vendor/modernizr-3.11.7.min.js"></script>
+<script src="assets/js/vendor/jquery-v3.6.0.min.js"></script>
+<script src="assets/js/vendor/jquery-migrate-v3.3.2.min.js"></script>
+<script src="assets/js/vendor/popper.min.js"></script>
+<script src="assets/js/vendor/bootstrap.min.js"></script>
+<script src="assets/js/plugins.js"></script>
+
+<!-- Main JS -->
+<script src="assets/js/main.js"></script>
+<script type="text/javascript">
+    function checkValidateLogin() {
+    var error = true;
+    error = validate("user_name", "UserName required") && error;
+    error = validate("user_password", "Password required") && error;
+
+    if (error == true) {
+        alert("Login successfully");
+    }
+    return error;
+}
+
+
+    function validate(inputName, requiredMessage) {
+        var input = document.forms["form_login"][inputName].value;
+        var errorField = document.getElementById(inputName + "_error");
+        if (input == "") {
+            errorField.innerHTML = requiredMessage;
+            errorField.classList.add("error");
+            return false;
+        } else {
+            errorField.innerHTML = "";
+            errorField.classList.remove("error");
+            return true;
+        }
+    }
+
+    function checkValidateRegister() {
+        var error = true;
+        error = validateUserName("username", "UserName required", "Max 50") && error;
+        error = validateEmail("email", "Email required", "Max 100", "Invalid Email") && error;
+        error = validatePassword("password", "Password required", "Please set the passwords from 8 to 20 characters",
+         "Please set the passwords including alphabets and numbers") && error;
+        error = validateConfirmPassword("password", "confirm_password", "Confirm-Password required",
+         "The password confirmation does not match") && error;
+        
+        if (error == true) {
+            alert("Register successfully");
+        }
+        return error;
+    }
+
+    function validateUserName(inputName, requiredMessage, message) {
+        var input = document.forms["form_register"][inputName].value;
+        var errorField = document.getElementById(inputName + "_error");
+        if (input == "") {
+            errorField.innerHTML = requiredMessage;
+            errorField.classList.add("error");
+            return false;
+        } else if (input.length > 50) {
+            errorField.innerHTML = message;
+            errorField.classList.add("error");
+            return false;
+        } else {
+            errorField.innerHTML = "";
+            errorField.classList.remove("error");
+            return true;
+        }
+    }
+    function validateEmail(inputName, requiredMessage, maxMessageLength, invalidMessage) {
+        var input = document.forms["form_register"][inputName].value;
+        var errorField = document.getElementById(inputName + "_error");
+        var regex = /^[\w+.-]+@([\w-]+\.)+[\w-]{2,4}$/;
+
+        if (input == "") {
+            errorField.innerHTML = requiredMessage;
+            errorField.classList.add("error");
+            return false;
+        } else if (input.length > 100) {
+            errorField.innerHTML = maxMessageLength;
+            errorField.classList.add("error");
+            return false;
+        } else if (!regex.test(input)) {
+            errorField.innerHTML = invalidMessage;
+            errorField.classList.add("error");
+            return false;
+        } else {
+            errorField.innerHTML = "";
+            errorField.classList.remove("error");
+            return true;
+        }
+    }
+    function validatePassword(inputName, requiredMessage, messageLength, message) {
+        var input = document.forms["form_register"][inputName].value;
+        var password_length = input.length;
+        var alphabet = input.trim().match(/^[A-Za-z]*$/);
+        var number = input.trim().match(/^[0-9]*$/);
+        var errorField = document.getElementById(inputName + "_error");
+        if (input == "") {
+            errorField.innerHTML = requiredMessage;
+            errorField.classList.add("error");
+            return false;
+        } else if ((password_length < 8) || (password_length > 20)) {
+            errorField.innerHTML = messageLength;
+            errorField.classList.add("error");
+            return false;
+        } else if (alphabet != null || number != null) {
+            errorField.innerHTML = message;
+            errorField.classList.add("error");
+            return false;
+        } else {
+            errorField.innerHTML = "";
+            errorField.classList.remove("error");
+            return true;
+        }
+    }
+    function validateConfirmPassword(password, confirmPassword, requiredMessage, message) {
+        var password = document.forms["form_register"][password].value;
+        var password_comfirm = document.forms["form_register"][confirmPassword].value;
+        var errorField = document.getElementById(confirmPassword + "_error");
+        if (password_comfirm == "") {
+            errorField.innerHTML = requiredMessage;
+            errorField.classList.add("error");
+            return false;
+        } else if (password.trim() != password_comfirm.trim()) {
+            errorField.innerHTML = message;
+            errorField.classList.add("error");
+            return false;
+        } else {
+            errorField.innerHTML = "";
+            errorField.classList.remove("error");
+            return true;
+        }
+    }
+
+    
+</script>
+</body>
+
+</html>
