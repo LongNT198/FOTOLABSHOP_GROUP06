@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="./images/logo/logonay.png">
+  <!-- CSS ============================================ -->
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <!-- Icon Font CSS -->
+  <link rel="stylesheet" href="assets/css/icons.min.css">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/cart.css">
+ 
+  <!-- Your CSS and other meta tags here -->
+</head>
+<body>
+  <header>
+    <!-- Your header content here -->
+    <div class="container-fluid" style="background-color: rgb(255, 255, 255);">
+        <div class="row">
+            <div class="col-xl-2 col-lg-2 col-md-6 col-4">
+                <div class="logo">
+                    <a href="index.html">
+                        <img alt="" src="images/logo/logonay.png" width="150px" weight="auto">
+                    </a>
+                </div>
+            </div>
+            <div class="col-xl-8 col-lg-8 d-none d-lg-block">
+                <div class="main-menu">
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">Home</a>
+                            <li><a href="categories.html"> Categories</a></li> 
+                            <li><a href="login-register.html"> Login</a></li>                          
+                            <li><a href="aboutus.html"> About us</a></li>
+                            <li><a href="contactus.html"> Contact us</a></li>
+                            
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="col-xl-2 col-lg-2 col-md-6 col-8">
+                <div class="header-right-wrap">
+                    <div class="same-style cart-wrap">
+                        <button class="icon-cart">
+                            <i class="pe-7s-shopbag"></i>
+                            <span class="count-style">0</span>
+                        </button>
+                        <div class="shopping-cart-content" style="overflow-y: scroll; height: 300px; border: none;">
+                            <ul ng-click="Delete(car, $event)"></ul>
+                            <div class="shopping-cart-total">
+                                <h4>Total : <span class="shop-total">$0.00</span></h4>
+                            </div>
+                            <div class="shopping-cart-btn btn-hover text-center">
+                                <a class="default-btn" href="cart-page.html">view cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </header>
+ 
+  <div class="breadcrumb-area pt-35 pb-35 bg-gray-3">
+    <div class="container">
+        <div class="breadcrumb-content text-center">
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li class="active">order </li>
+            </ul>
+        </div>
+        <br>
+
+
+        <div>
+            <div class="body-content outer-top-xs">
+                <div class="container">
+                    <div class="row ">
+                        <div class="shopping-cart">
+                            <div class="shopping-cart-table ">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th class="cart-romove item">Remove</th>
+                                <th class="cart-description item">Image</th>
+                                <th class="cart-product-name item">Product Name</th>
+                                <th class="cart-edit item">Edit</th>
+                                <th class="cart-qty item">Quantity</th>
+                                <th class="cart-sub-total item">Subtotal</th>
+                                <th class="cart-total last-item">Grandtotal</th>
+                            </tr>
+                            
+                        </thead><!-- /thead -->
+                        <tfoot>
+                            <tr>
+                                <td colspan="7">
+                                    <div class="shopping-cart-btn">
+                                        <span class="">
+                                            <a href="categories.html" class="btn btn-upper btn-primary outer-left-xs" style="background-color: #29ABE2 ;border: none; ">Continue Shopping</a>
+                                            <a href="#" id="updateCartBtn" class="btn btn-upper btn-primary pull-right outer-right-xs" style="background-color: #29ABE2;border: none;">Update shopping cart</a>
+                                        </span>
+                                    </div><!-- /.shopping-cart-btn -->
+                                </td>
+                            </tr>
+                        </tfoot>
+                        
+                        <tbody>
+                            <tr class="revieww1">
+                                <td class="romove-item"><a href="#" title="cancel" class="icon"><i class="fa fa-trash-o"></i></a></td>
+                                <td class="cart-image">
+                                    <a class="entry-thumbnail" href="detail.html">
+                                        <img src="./images/Categories/BestSeller/FE C 16-35mm T3.1 G_02.jpg" alt="">
+                                    </a>
+                                </td>
+                                <td class="cart-product-name-info">
+                                    <h4 class='cart-product-description'><a href="#">FE C 16-35mm</a></h4>
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="rating rateit-small"></div>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="reviews">
+                                                (06 Reviews)
+                                            </div>
+                                        </div>
+                                    </div><!-- /.row -->
+                                    <div class="cart-product-info">
+                                                        <span class="product-color">COLOR:<span>Black</span></span>
+                                    </div>
+                                </td>
+                                <td class="cart-product-edit"><a href="#" class="product-edit">Edit</a></td>
+                                <td class="cart-product-quantity">
+                                    <div class="quant-input">
+                                            <div class="arrows">
+                                              <div class="arrow plus gradient"><span class="ir"><i class="icon fa fa-sort-asc"></i></span></div>
+                                              <div class="arrow minus gradient"><span class="ir"><i class="icon fa fa-sort-desc"></i></span></div>
+                                            </div>
+                                            <input type="text" value="1">
+                                      </div>
+                                </td>
+                                <td class="cart-product-sub-total"><span class="cart-sub-total-price">$300.00</span></td>
+                                <td class="cart-product-grand-total"><span class="cart-grand-total-price">$300.00</span></td>
+                            </tr>
+                            <tr>
+                                <td class="romove-item"><a href="#" title="cancel" class="icon"><i class="fa fa-trash-o"></i></a></td>
+                                <td class="cart-image">
+                                    <a class="entry-thumbnail" href="detail.html">
+                                        <img src="./images/Categories/BestSeller/D7500 01.jpg" alt="">
+                                    </a>
+                                </td>
+                                <td class="cart-product-name-info">
+                                    <h4 class='cart-product-description'><a href="detail.html">D7500</a></h4>
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="rating rateit-small"></div>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="reviews">
+                                                (06 Reviews)
+                                            </div>
+                                        </div>
+                                    </div><!-- /.row -->
+                                    <div class="cart-product-info">
+                                    <span class="product-color">COLOR:<span>black</span></span>
+                                    </div>
+                                </td>
+                              
+        
+                                <td class="cart-product-edit"><a href="#" class="product-edit">Edit</a></td>
+                                <td class="cart-product-quantity">
+                                    <div class="cart-quantity">
+                                        <div class="quant-input">
+                                            <div class="arrows">
+                                              <div class="arrow plus gradient"><span class="ir"><i class="icon fa fa-sort-asc"></i></span></div>
+                                              <div class="arrow minus gradient"><span class="ir"><i class="icon fa fa-sort-desc"></i></span></div>
+                                            </div>
+                                            <input type="text" value="1">
+                                      </div>
+                                    </div>
+                                </td>
+                                <td class="cart-product-sub-total"><span class="cart-sub-total-price">$300.00</span></td>
+                                <td class="cart-product-grand-total"><span class="cart-grand-total-price">$300.00</span></td>
+
+                                
+                                
+                            </tr>
+                            <tr>
+                                <td class="romove-item"><a href="#" title="cancel" class="icon"><i class="fa fa-trash-o"></i></a></td>
+                                <td class="cart-image">
+                                    <a class="entry-thumbnail" href="detail.html">
+                                        <img src="./images/Categories/BestSeller/PC NIKKOR 19mm f4E ED 01.jpg" alt="">
+                                    </a>
+                                </td>
+                                <td class="cart-product-name-info">
+                                    <h4 class='cart-product-description'><a href="detail.html">PC NIKKOR 19mm</a></h4>
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="rating rateit-small"></div>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="reviews">
+                                                (06 Reviews)
+                                            </div>
+                                        </div>
+                                    </div><!-- /.row -->
+                                    <div class="cart-product-info">
+                                    <span class="product-color">COLOR:<span>black</span></span>
+                                    </div>
+                                </td>
+                              
+        
+                                <td class="cart-product-edit"><a href="#" class="product-edit">Edit</a></td>
+                                <td class="cart-product-quantity">
+                                    <div class="cart-quantity">
+                                        <div class="quant-input">
+                                            <div class="arrows">
+                                              <div class="arrow plus gradient"><span class="ir"><i class="icon fa fa-sort-asc"></i></span></div>
+                                              <div class="arrow minus gradient"><span class="ir"><i class="icon fa fa-sort-desc"></i></span></div>
+                                            </div>
+                                            <input type="text" value="1">
+                                      </div>
+                                    </div>
+                                </td>
+                                <td class="cart-product-sub-total"><span class="cart-sub-total-price">$300.00</span></td>
+                                <td class="cart-product-grand-total"><span class="cart-grand-total-price">$300.00</span></td>
+
+                                
+                                
+                            </tr>
+                            <tr>
+                                <td class="romove-item"><a href="#" title="cancel" class="icon"><i class="fa fa-trash-o"></i></a></td>
+                                <td class="cart-image">
+                                    <a class="entry-thumbnail" href="detail.html">
+                                        <img src="./images/Categories/BestSeller/PowerShot G7 X Mark III 02.png" alt="">
+                                    </a>
+                                </td>
+                                <td class="cart-product-name-info">
+                                    <h4 class='cart-product-description'><a href="detail.html">PowerShot G7 X Mark III</a></h4>
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="rating rateit-small"></div>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="reviews">
+                                                (06 Reviews)
+                                            </div>
+                                        </div>
+                                    </div><!-- /.row -->
+                                    <div class="cart-product-info">
+                                    <span class="product-color">COLOR:<span>black</span></span>
+                                    </div>
+                                </td>
+                              
+        
+                                <td class="cart-product-edit"><a href="#" class="product-edit">Edit</a></td>
+                                <td class="cart-product-quantity">
+                                    <div class="cart-quantity">
+                                        <div class="quant-input">
+                                            <div class="arrows">
+                                              <div class="arrow plus gradient"><span class="ir"><i class="icon fa fa-sort-asc"></i></span></div>
+                                              <div class="arrow minus gradient"><span class="ir"><i class="icon fa fa-sort-desc"></i></span></div>
+                                            </div>
+                                            <input type="text" value="1">
+                                      </div>
+                                    </div>
+                                </td>
+                                <td class="cart-product-sub-total"><span class="cart-sub-total-price">$300.00</span></td>
+                                <td class="cart-product-grand-total"><span class="cart-grand-total-price">$300.00</span></td>
+
+                                
+                                
+                            </tr>
+                        </tbody><!-- /tbody -->
+                    </table><!-- /table -->
+                    
+                    
+                </div>
+            </div><!-- /.shopping-cart-table -->				<div class="col-md-4 col-sm-12 estimate-ship-tax">
+                
+
+  <h4>buyer information</h4>
+  <form id="myForm">
+    <div>
+      <label for="fullname">Full Name:</label>
+      <input type="text" id="fullname" required>
+    </div>
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" required>
+    </div>
+    <div>
+      <label for="phone">Phone:</label>
+      <h6 style="color: rgb(255, 0, 0);">9-12number</h6>
+      <input type="text" id="phone" required>
+    </div>
+    <!-- <div>
+      <label for="country">Country:</label>
+      <select id="country" required>
+        <option value="">Select Country</option>
+        <option value="country1">Country 1</option>
+        <option value="country2">Country 2</option>
+      </select>
+    </div> -->
+
+
+    <div class="form-group">
+        <label class="info-title control-label"  for="country">Country <span style="color: rgb(255, 0, 0);">*</span></label>
+        <select class="form-control unicase-form-control selectpicker"  id="country"  required >
+            <option>--Select options--</option>
+            <option>India</option>
+            <option>SriLanka</option>
+            <option>united kingdom</option>
+            <option>saudi arabia</option>
+            <option>united arab emirates</option>
+        </select>
+    </div>
+
+
+    
+
+    <div class="form-group">
+        <label class="info-title control-label"  for="state">State/Province <span style="color: rgb(255, 0, 0);">*</span></label>
+        <select class="form-control unicase-form-control selectpicker" id="state">
+            <option>--Select options--</option>
+            <option>TamilNadu</option>
+            <option>Kerala</option>
+            <option>Andhra Pradesh</option>
+            <option>Karnataka</option>
+            <option>Madhya Pradesh</option>
+        </select>
+    </div>
+
+
+    <div>
+        <label for="address">Address:</label>
+        <textarea id="address" required></textarea>
+      </div>
+
+
+      <div class="form-group">
+        <label class="info-title control-label">Zip/Postal Code</label>
+        <input type="text" class="form-control unicase-form-control text-input" placeholder="">
+    </div>
+    <div>
+      <label for="paymentMethod">Payment Method:<span style="color: rgb(255, 0, 0);">*</span></label>
+      <select id="paymentMethod" required  style="height: 50px; border:0.5px rgb(228, 228, 228) solid ;">
+        <option>--Select options--</option>
+        <option value="method1">Payment upon receipt (COD) <br>
+            <italic>Our staff will contact you as soon as possible.</italic></option>
+        <option value="method2">Bank transfer <br>
+            Applicable to customers who want to transfer money directly via bank</option>
+       
+      </select>
+    
+  </form>
+  <br>
+  <br>
+  <!-- <a href=""><button type="submit" href="#" class="btn btn-upper btn-primary outer-left-xs" style="background-color: #29ABE2;">Submit</button></a> -->
+  <a href="categories.html" class="btn btn-upper btn-primary pull-right outer-right-xs" style="background-color: #29ABE2;border: none;" onclick="goBack()">Turn To Cart</a>
+  <div>
+    <div class="col-md-4 col-sm-12 estimate-ship-tax">
+       <table class="table">
+          
+           <tbody>
+                  
+           </tbody><!-- /tbody -->
+       </table><!-- /table -->
+   </div><!-- /.estimate-ship-tax -->
+   
+   <div class="col-md-4 col-sm-12 cart-shopping-total" style="width: 400px;">
+       <table class="table">
+           <thead>
+               <tr>
+                   <th>
+                       <div class="cart-sub-total">
+                           Subtotal<span class="inner-left-md">$1500.00</span>
+                       </div>
+                       <div class="cart-grand-total">
+                           Grand Total<span class="inner-left-md">$1500.00</span>
+                       </div>
+                   </th>
+               </tr>
+           </thead><!-- /thead -->
+           <tbody>
+                   <tr>
+                       <td>
+                           <div class="cart-checkout-btn pull-right">
+                               <button type="submit" class="btn btn-primary checkout-btn" style="border: none;">PROCCED TO CHEKOUT</button>
+                               <span class="">Checkout with multiples address!</span>
+                           </div>
+                       </td>
+                   </tr>
+           </tbody><!-- /tbody -->
+       </table><!-- /table -->
+   </div>
+         
+</div>
+  
+
+</div>
+
+                
+
+
+    
+</div>
+
+ 
+
+
+  
+<footer class="footer-area bg-gray pt-50 pb-20">
+    <!-- Your footer content here -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2 col-md-4 col-sm-4">
+                <div class="copyright mb-30">
+                    <div class="footer-logo">
+                        <a href="index.html">
+                            <img alt="" src="images/logo/logonay.png" width="100%" height="100%"> </a>
+                        </a>
+                    </div>
+                    <p>© 2023 <a href="#">Fotolab Shop</a>.<br> All Rights Reserved</p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-4">
+                <div class="footer-widget mb-30 ml-30">
+                    <div class="footer-title">
+                        <h3><b>SITE MAP</b></h3>
+                    </div>
+                    <div class="footer-list">
+                        <ul>
+                            <li><a href="index.html">Homepage</a></li>
+                            <li><a href="categories">Categories</a></li>
+                            <li><a href="login-register.html">Login</a></li>
+                            <li><a href="aboutus.html">About us</a></li>
+                            <li><a href="contactus.html">Contact us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-4">
+                <div class="footer-widget mb-30 ml-50">
+                    <div class="footer-title">
+                        <h3><b>CATEGORIES</b></h3>
+                    </div>
+                    <div class="footer-list">
+                        <ul>
+                            <li><a href="#">Cameras</a></li>
+                            <li><a href="#">Camera lenses</a></li>
+                            <li><a href="#">Pro audio</a></li>
+                            <li><a href="#">Tripods & supports</a></li>
+                            <li><a href="#">Lighting & Studio</a></li>
+                            <li><a href="#">Camera bags & cases</a></li>
+                            <li><a href="#">Miscellaneous accessories</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-6 col-sm-6">
+                <div class="footer-widget mb-30 ml-75">
+                    <div class="footer-title">
+                        <h3><b>Brand</b></h3>
+                    </div>
+                    <div class="footer-list">
+                        <ul>
+                            <li><a href="#">Canon</a></li>
+                            <li><a href="#">Nikon</a></li>
+                            <li><a href="#">Sony</a></li>
+                            <li><a href="#">Yashica</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="footer-widget mb-30 ml-70">
+                    <div class="footer-title">
+                        <h3><B>Group 06</B></h3>
+                    </div>
+                    <div class="subscribe-style">
+                        <p>This is first E-Project our group</p><br>
+                        <h4>Thanks for visiting!</h4>         
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+  <!-- Your JavaScript and other scripts here -->
+</body>
+</html>
+<script>
+    function goBack() {
+      // Xử lý khi người dùng quay lại giỏ hàng
+      alert('Return to cart');
+    }
+    document.getElementById('myForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const fullname = document.getElementById('fullname').value;
+      const email = document.getElementById('email').value;
+      const phone = document.getElementById('phone').value;
+      const country = document.getElementById('country').value;
+      const state = document.getElementById('state').value;
+      const address = document.getElementById('address').value;
+      const paymentMethod = document.getElementById('paymentMethod').value;
+
+      const emailPattern = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
+      const phonePattern = /^\d{9,13}$/;
+
+      if (fullname && emailPattern.test(email) && phonePattern.test(phone) && paymentMethod !== '--Select options--' && country !== '--Select options--' && state !== '--Select options--' && address) {
+    alert('Order Success');
+        window.location.href = 'categories.html'; // Chuyển đến trang categories.html
+      } else {
+        alert('Please re-enter your information');
+      }
+    });
+  </script>
+  <script>
+    document.querySelectorAll('.cart-product-quantity').forEach(function(quantity) {
+   var input = quantity.querySelector('input');
+   var plus = quantity.querySelector('.arrow.plus');
+   var minus = quantity.querySelector('.arrow.minus');
+ 
+   plus.addEventListener('click', function() {
+     var value = parseInt(input.value);
+     if (value < 100) {
+       input.value = value + 1;
+     }
+   });
+ 
+   minus.addEventListener('click', function() {
+     var value = parseInt(input.value);
+     if (value > 1) {
+       input.value = value - 1;
+     }
+   });
+ });
+   </script>
+ 
+ 
+ <script>
+     document.querySelectorAll('.romove-item').forEach(function(button) {
+     button.addEventListener('click', function() {
+         button.parentElement.remove();
+     });
+     });
+ </script>
+ <script>
+    // Lắng nghe sự kiện click vào nút "Update shopping cart"
+    document.getElementById('updateCartBtn').addEventListener('click', function() {
+      // Hiển thị thông báo "Đã cập nhật thành công"
+      alert('Updated successfully');
+    });
+  </script>
